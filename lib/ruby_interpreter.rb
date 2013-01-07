@@ -10,7 +10,7 @@ class RubyInterpreter
 	def unify
     h1 = ontology_hierarchy @factory_1.call
     h2 = ontology_hierarchy @factory_2.call
-    h2.intersection(h1).to_a
+    (h2 & h1).to_a
 	end
 
   def ontology_hierarchy obj
