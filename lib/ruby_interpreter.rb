@@ -1,3 +1,5 @@
+require 'set'
+
 class RubyInterpreter
 
 	def initialize ontology_1, ontology_2
@@ -6,11 +8,8 @@ class RubyInterpreter
 	end
 
 	def unify
-
-
     h1 = ontology_hierarchy @factory_1.call
     h2 = ontology_hierarchy @factory_2.call
-
     h2.intersection(h1).to_a
 	end
 
